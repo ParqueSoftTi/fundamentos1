@@ -1,0 +1,23 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2024-04-20T12:37:34-05:00",
+  "id": "fundamentos1-markdown",
+  "duration": 0,
+  "title": "Fundamentos",
+  "summary": "Curso de Fundamentos 1",
+  "source": ".\\fundamentos1.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "fundamentosdeprogramacion"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "fundamentos1-markdown"
+}

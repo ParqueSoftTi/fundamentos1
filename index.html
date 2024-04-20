@@ -1,0 +1,333 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Fundamentos</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14" ga4id=""></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  codelab-ga4id=""
+                  id="fundamentos1-markdown"
+                  title="Fundamentos"
+                  environment="web"
+                  feedback-link="">
+    
+      <google-codelab-step label="Instalacion." duration="0">
+        <p>1.Visita el Sitio Web de PSeInt: Dirígete al sitio oficial de PSeInt en pseint.sourceforge.io.</p>
+<p class="image-container"><img alt="Imagen de pagina" src="img\\4e15528e62f52a28.png"></p>
+<p>2.Navega a la Sección de Descargas: En el sitio web, busca la sección de descargas o simplemente desplázate hacia abajo en la página de inicio para encontrar los enlaces de descarga.</p>
+<p>3.Selecciona tu Sistema Operativo: PSeInt está disponible para Windows, Linux y macOS. Haz clic en el enlace de descarga correspondiente a tu sistema operativo.</p>
+<p>4.Descarga el Instalador: Una vez que hayas seleccionado tu sistema operativo, se te dirigirá a una página de descarga. Haz clic en el enlace de descarga para iniciar la descarga del instalador.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 1" duration="0">
+        <p>Calculadora Simple: a Escribe un programa que solicite al usuario dos números y una operación (suma, resta, multiplicación o división). Luego, muestra el resultado de la operación.</p>
+<pre><code>Proceso Calculadora_Simple
+    Definir numero1, numero2, resultado como Real
+    Definir operacion como Caracter
+
+    Escribir &#34;Ingrese el primer número:&#34;
+    Leer numero1
+    Escribir &#34;Ingrese el segundo número:&#34;
+    Leer numero2
+    Escribir &#34;Ingrese la operación (+, -, *, /):&#34;
+    Leer operacion
+
+    Segun operacion Hacer
+        Caso &#34;+&#34;
+            resultado &lt;- numero1 + numero2
+        Caso &#34;-&#34;
+            resultado &lt;- numero1 - numero2
+        Caso &#34;*&#34;
+            resultado &lt;- numero1 * numero2
+        Caso &#34;/&#34;
+            resultado &lt;- numero1 / numero2
+        Otro
+            Escribir &#34;Operación no válida.&#34;
+    FinSegun
+
+    Escribir &#34;El resultado es:&#34;, resultado
+FinProceso
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 2" duration="0">
+        <p>Escribe un programa que solicite al usuario un número entero positivo N y luego calcule la suma de todos los números enteros desde 1 hasta N.</p>
+<pre><code>Proceso Suma_De_Numeros
+    Definir N, suma, i como Entero
+
+    Escribir &#34;Ingrese un número entero positivo:&#34;
+    Leer N
+
+    suma &lt;- 0
+    Para i &lt;- 1 Hasta N Con Paso 1 Hacer
+        suma &lt;- suma + i
+    FinPara
+
+    Escribir &#34;La suma de los números desde 1 hasta&#34;, N, &#34;es:&#34;, suma
+FinProceso
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 3" duration="0">
+        <p>Escribe un programa que solicite al usuario un número entero positivo N y luego calcule su factorial.</p>
+<pre><code>Proceso Factorial_De_Un_Numero
+    Definir N, factorial, i como Entero
+
+    Escribir &#34;Ingrese un número entero positivo:&#34;
+    Leer N
+
+    factorial &lt;- 1
+    Para i &lt;- 1 Hasta N Con Paso 1 Hacer
+        factorial &lt;- factorial * i
+    FinPara
+
+    Escribir &#34;El factorial de&#34;, N, &#34;es:&#34;, factorial
+FinProceso
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 4" duration="0">
+        <p>Escribe un programa que solicite al usuario un número entero y luego muestre la tabla de multiplicar correspondiente.</p>
+<pre><code>Proceso Tabla_De_Multiplicar
+    Definir numero, i como Entero
+
+    Escribir &#34;Ingrese un número entero:&#34;
+    Leer numero
+
+    Para i &lt;- 1 Hasta 10 Con Paso 1 Hacer
+        Escribir numero, &#34;x&#34;, i, &#34;=&#34;, numero * i
+    FinPara
+FinProceso
+
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 5" duration="0">
+        <p>Escribe un programa que solicite al usuario un número entero N y luego muestre los primeros N números pares e impares.</p>
+<pre><code>Proceso Numeros_Pares_E_Impares
+    Definir N, i, contador_pares, contador_impares como Entero
+
+    Escribir &#34;Ingrese un número entero:&#34;
+    Leer N
+
+    contador_pares &lt;- 0
+    contador_impares &lt;- 0
+    i &lt;- 1
+    Mientras contador_pares &lt; N Y contador_impares &lt; N Hacer
+        Si i MOD 2 = 0 Entonces
+            Escribir &#34;Número par:&#34;, i
+            contador_pares &lt;- contador_pares + 1
+        Sino
+            Escribir &#34;Número impar:&#34;, i
+            contador_impares &lt;- contador_impares + 1
+        FinSi
+        i &lt;- i + 1
+    FinMientras
+FinProceso
+
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 6" duration="0">
+        <p>Escribe un programa que solicite al usuario un número entero N y luego muestre los primeros N números primos.</p>
+<pre><code>Proceso Numeros_Primos
+    Definir N, i, j, contador como Entero
+    Definir es_primo como Logico
+
+    Escribir &#34;Ingrese un número entero:&#34;
+    Leer N
+
+    contador &lt;- 0
+    i &lt;- 2
+    Mientras contador &lt; N Hacer
+        es_primo &lt;- Verdadero
+        Para j &lt;- 2 Hasta i - 1 Con Paso 1 Hacer
+            Si i MOD j = 0 Entonces
+                es_primo &lt;- Falso
+                Romper
+            FinSi
+        FinPara
+        Si es_primo Entonces
+            Escribir &#34;Número primo:&#34;, i
+            contador &lt;- contador + 1
+        FinSi
+        i &lt;- i + 1
+    FinMientras
+FinProceso
+
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 7" duration="0">
+        <p>Escribe un programa que solicite al usuario un número entero N y luego muestre los primeros N números de la secuencia de Fibonacci.</p>
+<pre><code>Proceso Fibonacci
+    Definir N, i, anterior, actual, siguiente como Entero
+
+    Escribir &#34;Ingrese un número entero:&#34;
+    Leer N
+
+    Si N &gt;= 1 Entonces
+        Escribir &#34;Secuencia de Fibonacci:&#34;
+        Escribir 0
+    FinSi
+
+    Si N &gt;= 2 Entonces
+        Escribir 1
+    FinSi
+
+    Si N &gt; 2 Entonces
+        anterior &lt;- 0
+        actual &lt;- 1
+        Para i &lt;- 3 Hasta N Con Paso 1 Hacer
+            siguiente &lt;- anterior + actual
+            Escribir siguiente
+            anterior &lt;- actual
+            actual &lt;- siguiente
+        FinPara
+    FinSi
+FinProceso
+
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 8" duration="0">
+        <p>Escribe un programa que solicite al usuario N números y luego muestre el mayor y el menor de ellos.</p>
+<pre><code>Proceso Mayor_Y_Menor_De_Numeros
+    Definir N, numero, mayor, menor, i como Entero
+
+    Escribir &#34;Ingrese la cantidad de números:&#34;
+    Leer N
+
+    Escribir &#34;Ingrese el primer número:&#34;
+    Leer numero
+    mayor &lt;- numero
+    menor &lt;- numero
+
+    Para i &lt;- 2 Hasta N Con Paso 1 Hacer
+        Escribir &#34;Ingrese el siguiente número:&#34;
+        Leer numero
+        Si numero &gt; mayor Entonces
+            mayor &lt;- numero
+        FinSi
+        Si numero &lt; menor Entonces
+            menor &lt;- numero
+        FinSi
+    FinPara
+
+    Escribir &#34;El mayor número es:&#34;, mayor
+    Escribir &#34;El menor número es:&#34;, menor
+FinProceso
+
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 9" duration="0">
+        <p>Escribe un programa que solicite al usuario un número entero y luego muestre su reverso.</p>
+<pre><code>Proceso Numero_Reversible
+    Definir numero, reverso, digito como Entero
+
+    Escribir &#34;Ingrese un número entero:&#34;
+    Leer numero
+
+    reverso &lt;- 0
+    Mientras numero &gt; 0 Hacer
+        digito &lt;- numero MOD 10
+        reverso &lt;- reverso * 10 + digito
+        numero &lt;- numero / 10
+    FinMientras
+
+    Escribir &#34;El reverso del número es:&#34;, reverso
+FinProceso
+
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Ejercicio 10" duration="0">
+        <p>Escribe un programa que solicite al usuario la base y el exponente y luego calcule su potencia.</p>
+<pre><code>Proceso Calculo_De_Potencia
+    Definir base, exponente, resultado como Real
+
+    Escribir &#34;Ingrese la base:&#34;
+    Leer base
+    Escribir &#34;Ingrese el exponente:&#34;
+    Leer exponente
+
+    resultado &lt;- Potencia(base, exponente)
+
+    Escribir &#34;El resultado de&#34;, base, &#34;elevado a&#34;, exponente, &#34;es:&#34;, resultado
+FinProceso
+
+Funcion Potencia(base, exponente)
+    Definir i como Entero
+    Definir resultado como Real
+
+    resultado &lt;- 1
+    Para i &lt;- 1 Hasta exponente Con Paso 1 Hacer
+        resultado &lt;- resultado * base
+    FinPara
+
+    Devolver resultado
+FinFuncion
+
+
+</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
